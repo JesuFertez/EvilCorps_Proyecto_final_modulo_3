@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/listarParaRevisarFragment">
+
+    <fragment
+        android:id="@+id/listarParaRevisarFragment"
+        android:name="com.evil_corps.checkapartment.ListarParaRevisarFragment"
+        android:label="fragment_listar_para_revisar"
+        tools:layout="@layout/fragment_listar_para_revisar" >
+        <action
+            android:id="@+id/action_listarParaRevisarFragment_to_contenedorCheckFragment"
+            app:destination="@id/contenedorCheckFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/contenedorCheckFragment"
+        android:name="com.evil_corps.checkapartment.ContenedorCheckFragment"
+        android:label="fragment_contenedor_check"
+        tools:layout="@layout/fragment_contenedor_check" >
+        <action
+            android:id="@+id/action_contenedorCheckFragment_to_listarParaRevisarFragment"
+            app:destination="@id/listarParaRevisarFragment" />
+    </fragment>
+</navigation>
