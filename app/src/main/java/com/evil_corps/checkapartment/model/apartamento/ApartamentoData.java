@@ -1,4 +1,4 @@
-package com.evil_corps.checkapartment.model;
+package com.evil_corps.checkapartment.model.apartamento;
 
 import java.util.ArrayList;
 import java.util.List;

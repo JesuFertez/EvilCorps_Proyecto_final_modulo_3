@@ -3,4 +3,14 @@
     <string name="btn_ingresar">Ingresar</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="chk_luces">Luces de la unidad</string>
+    <string name="chk_dormitorio">Elementos del dormitorio</string>
+    <string name="chk_cocina">Elementos de la cocina</string>
+    <string name="chk_bano">Elementos del baño</string>
+    <string name="rd_terminaciones_normal">Estado terminaciones normal</string>
+    <string name="rd_regular">Estado terminaciones regular</string>
+    <string name="rd_malas">Estado de terminaciones malas</string>
+    <string name="error">Error</string>
+    <string name="alert_msg">Correo o contraseña invalido</string>
+    <string name="ok">OK</string>
 </resources>

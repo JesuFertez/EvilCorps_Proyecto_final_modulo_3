@@ -7,16 +7,16 @@
 
     <fragment
         android:id="@+id/listarParaRevisarFragment"
-        android:name="com.evil_corps.checkapartment.ListarParaRevisarFragment"
+        android:name="com.evil_corps.checkapartment.view.ListarFragment"
         android:label="fragment_listar_para_revisar"
-        tools:layout="@layout/fragment_listar_para_revisar" >
+        tools:layout="@layout/fragment_listar" >
         <action
             android:id="@+id/action_listarParaRevisarFragment_to_contenedorCheckFragment"
             app:destination="@id/contenedorCheckFragment" />
     </fragment>
     <fragment
         android:id="@+id/contenedorCheckFragment"
-        android:name="com.evil_corps.checkapartment.ContenedorCheckFragment"
+        android:name="com.evil_corps.checkapartment.view.ContenedorCheckFragment"
         android:label="fragment_contenedor_check"
         tools:layout="@layout/fragment_contenedor_check" >
         <action
