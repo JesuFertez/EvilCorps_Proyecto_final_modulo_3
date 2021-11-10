@@ -1,7 +1,5 @@
 package com.evil_corps.checkapartment.view;
 
-import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -13,7 +11,6 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.bumptech.glide.Glide;
-import com.evil_corps.checkapartment.R;
 import com.evil_corps.checkapartment.databinding.FragmentContenedorCheckBinding;
 import com.evil_corps.checkapartment.presenter.presenterdetalle.PresenterDetalleImplement;
 import com.evil_corps.checkapartment.presenter.presenterdetalle.PresenterView;
@@ -33,12 +30,7 @@ public class ContenedorCheckFragment extends Fragment implements PresenterView {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState){
         initPresenter();
-        defaultBoton();
         setListenerBoton();
-    }
-
-    private void defaultBoton() {
-        binding.btAlerta.setEnabled(false);
     }
 
     private void initBinding(LayoutInflater inflater, ViewGroup container) {
@@ -99,32 +91,16 @@ public class ContenedorCheckFragment extends Fragment implements PresenterView {
 
     @Override
     public void mostrarPuntaje(String puntaje) {
-        String p = getString(R.string.tv_resultado) + " " + puntaje + " " + getString(R.string.puntos);
-        binding.tvResultado.setText(p);
+
     }
 
     @Override
     public void enviarMail(String nombreEdificio, String numeroDepto, int puntaje) {
 
-        String email = "marishu87@gmail.com";
-        String subject = "marishu87@gmail.com";
-        String body = String.format("Estimado: el dpto %s del edificio %s obtivo %s puntaje, favor reportarlo, saludos xd"
-                ,nombreEdificio,numeroDepto,String.valueOf(puntaje)) ;
-        String chooserTitle = "Reporte dpto " + numeroDepto;
-
-        Uri uri = Uri.parse("mail to:" + email)
-                .buildUpon()
-                .appendQueryParameter("subject", subject)
-                .appendQueryParameter("body", body)
-                .build();
-
-        Intent emailIntent = new Intent(Intent.ACTION_SENDTO, uri);
-        startActivity(Intent.createChooser(emailIntent,chooserTitle));
     }
 
     @Override
     public void activarBoton() {
 
-        binding.btAlerta.setEnabled(true);
     }
 }

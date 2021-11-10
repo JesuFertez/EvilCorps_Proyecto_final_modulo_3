@@ -13,6 +13,4 @@
     <string name="error">Error</string>
     <string name="alert_msg">Correo o contraseña invalido</string>
     <string name="ok">OK</string>
-    <string name="tv_resultado">resultado</string>
-    <string name="puntos">puntos</string>
 </resources>
