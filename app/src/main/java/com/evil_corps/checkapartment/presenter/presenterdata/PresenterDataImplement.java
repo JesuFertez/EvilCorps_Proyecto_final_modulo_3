@@ -4,8 +4,7 @@ import android.os.Bundle;
 
 import androidx.navigation.Navigation;
 
-import com.evil_corps.checkapartment.R;
-import com.evil_corps.checkapartment.adapter.DepartamentosAdapter;
+import com.evil_corps.checkapartment.adapter.ApartamentoAdapter;
 import com.evil_corps.checkapartment.model.apartamento.Apartamento;
 import com.evil_corps.checkapartment.model.apartamento.ApartamentoData;
 
@@ -22,14 +21,14 @@ private PresenterData datos;
 
     @Override
     public void generarListado() {
-        DepartamentosAdapter adapter = new DepartamentosAdapter((ArrayList<Apartamento>) ApartamentoData.apartamentoList());
+        ApartamentoAdapter adapter = new ApartamentoAdapter((ArrayList<Apartamento>) ApartamentoData.apartamentoList());
         datos.mostrarDatos(adapter);
     }
 
     @Override
     public void generarBundle(Apartamento apartamento) {
             Bundle bundle = new Bundle();
-            bundle.putSerializable("apartamento", (Serializable) apartamento);
+            bundle.putSerializable("apartamento",apartamento);
             datos.seleccionarItem(bundle);
     }
 

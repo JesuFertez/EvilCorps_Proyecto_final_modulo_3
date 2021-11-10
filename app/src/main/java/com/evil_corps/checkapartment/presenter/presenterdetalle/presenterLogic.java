@@ -3,9 +3,9 @@ package com.evil_corps.checkapartment.presenter.presenterdetalle;
 import android.os.Bundle;
 
 public interface presenterLogic {
-    void mostrarDetalle();
+    void generarAlerta();
     void calcularPuntaje();
-    void tomarAccion(Bundle bundle);
+    void obtenerApartamento(Bundle bundle);
 
 
 }

@@ -1,6 +1,8 @@
 package com.evil_corps.checkapartment.model.apartamento;
 
-public class Apartamento {
+import java.io.Serializable;
+
+public class Apartamento implements Serializable {
 
     private String nombreEdificio;
     private String nombreProyecto;
